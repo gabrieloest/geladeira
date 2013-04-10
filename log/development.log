@@ -1,0 +1,336 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (131.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (177.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateRecipes (20130409235402)
+  [1m[35m (156.6ms)[0m  CREATE TABLE `recipes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (42.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130409235402')[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateRecipes (20130409235402)
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-04-09 21:13:07 -0300
+Connecting to database specified by database.yml
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__209115436__call__316224751__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2013-04-09 21:13:11 -0300
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__209115436__call__316224751__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/recipes" for 127.0.0.1 at 2013-04-09 21:22:28 -0300
+Connecting to database specified by database.yml
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT `recipes`.* FROM `recipes` [0m
+  Rendered recipes/index.html.erb within layouts/application (2.4ms)
+Compiled recipes.css  (29ms)  (pid 19888)
+Compiled scaffolds.css  (17ms)  (pid 19888)
+Compiled application.css  (64ms)  (pid 19888)
+Compiled jquery.js  (6ms)  (pid 19888)
+Compiled jquery_ujs.js  (0ms)  (pid 19888)
+Compiled recipes.js  (142ms)  (pid 19888)
+Compiled application.js  (295ms)  (pid 19888)
+Completed 200 OK in 508ms (Views: 453.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 21:22:29 -0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2013-04-09 21:22:29 -0300
+Served asset /recipes.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 21:22:29 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/recipes.js?body=1" for 127.0.0.1 at 2013-04-09 21:22:29 -0300
+Served asset /recipes.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 21:22:29 -0300
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateRecipes (20130409235402)
+Migrating to AddAttachmentAvatarToRecipes (20130409235736)
+  [1m[35m (264.7ms)[0m  ALTER TABLE `recipes` ADD `avatar_file_name` varchar(255)
+  [1m[36m (244.4ms)[0m  [1mALTER TABLE `recipes` ADD `avatar_content_type` varchar(255)[0m
+  [1m[35m (291.4ms)[0m  ALTER TABLE `recipes` ADD `avatar_file_size` int(11)
+  [1m[36m (242.8ms)[0m  [1mALTER TABLE `recipes` ADD `avatar_updated_at` datetime[0m
+  [1m[35m (49.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130409235736')
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2013-04-09 21:28:32 -0300
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT `recipes`.* FROM `recipes` 
+  Rendered recipes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2013-04-09 21:28:32 -0300
+Served asset /recipes.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 21:28:32 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 21:28:32 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recipes.js?body=1" for 127.0.0.1 at 2013-04-09 21:28:32 -0300
+Served asset /recipes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 21:28:32 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2013-04-09 21:28:34 -0300
+Processing by RecipesController#new as HTML
+  Rendered recipes/_form.html.erb (24.1ms)
+  Rendered recipes/new.html.erb within layouts/application (41.0ms)
+Completed 500 Internal Server Error in 72ms
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x978b190>:0xb54f5000>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :name %><br />
+    16:     <%= f.text_field :name %>
+    17:   </div>
+    18:   <div class="field">
+  app/views/recipes/_form.html.erb:15:in `block in _app_views_recipes__form_html_erb___554537016__626428528'
+  app/views/recipes/_form.html.erb:1:in `_app_views_recipes__form_html_erb___554537016__626428528'
+  app/views/recipes/new.html.erb:3:in `_app_views_recipes_new_html_erb__540185714__626547988'
+  app/controllers/recipes_controller.rb:29:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2013-04-09 21:28:44 -0300
+Processing by RecipesController#new as HTML
+  Rendered recipes/_form.html.erb (82.8ms)
+  Rendered recipes/new.html.erb within layouts/application (85.5ms)
+Completed 200 OK in 97ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 21:28:44 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/recipes.js?body=1" for 127.0.0.1 at 2013-04-09 21:28:44 -0300
+Served asset /recipes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2013-04-09 21:28:44 -0300
+Served asset /recipes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 21:28:44 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 21:28:44 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2013-04-09 21:28:56 -0300
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s5BmytXxaQJjeuda57vSPlE70QxTazycZxJv52SuUO8=", "recipe"=>{"name"=>"Delicia de Abacaxi", "description"=>"Teste", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x8c05884 @original_filename="abacaxi.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[avatar]\"; filename=\"abacaxi.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20130409-19888-1tvbx2d>>}, "commit"=>"Create Recipe"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/abacaxi20130409-19888-iatouu.jpg[0]'
+Command :: identify -format %m '/tmp/abacaxi20130409-19888-iatouu.jpg[0]'
+Command :: identify -format %m '/tmp/abacaxi20130409-19888-iatouu.jpg[0]'
+Command :: identify -format %m '/tmp/abacaxi20130409-19888-iatouu.jpg[0]'
+Command :: convert '/tmp/abacaxi20130409-19888-iatouu.jpg[0]' -auto-orient -resize "300x300>" '/tmp/abacaxi20130409-19888-iatouu20130409-19888-1jk9xwq'
+Command :: file -b --mime '/tmp/abacaxi20130409-19888-iatouu20130409-19888-1jk9xwq'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/abacaxi20130409-19888-iatouu.jpg[0]'
+Command :: identify -format %m '/tmp/abacaxi20130409-19888-iatouu.jpg[0]'
+Command :: identify -format %m '/tmp/abacaxi20130409-19888-iatouu.jpg[0]'
+Command :: identify -format %m '/tmp/abacaxi20130409-19888-iatouu.jpg[0]'
+Command :: convert '/tmp/abacaxi20130409-19888-iatouu.jpg[0]' -auto-orient -resize "100x100>" '/tmp/abacaxi20130409-19888-iatouu20130409-19888-1m3dezo'
+Command :: file -b --mime '/tmp/abacaxi20130409-19888-iatouu20130409-19888-1m3dezo'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `recipes` (`avatar_content_type`, `avatar_file_name`, `avatar_file_size`, `avatar_updated_at`, `created_at`, `description`, `name`, `updated_at`) VALUES ('image/jpeg', 'abacaxi.jpg', 39249, '2013-04-10 00:28:56', '2013-04-10 00:28:57', 'Teste', 'Delicia de Abacaxi', '2013-04-10 00:28:57')
+[paperclip] Saving attachments.
+  [1m[36m (51.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/recipes/1
+Completed 302 Found in 1086ms (ActiveRecord: 52.2ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2013-04-09 21:28:57 -0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT `recipes`.* FROM `recipes` WHERE `recipes`.`id` = 1 LIMIT 1
+  Rendered recipes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 21:28:57 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 21:28:57 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 21:28:57 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recipes.js?body=1" for 127.0.0.1 at 2013-04-09 21:28:57 -0300
+Served asset /recipes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2013-04-09 21:28:57 -0300
+Served asset /recipes.css - 304 Not Modified (0ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2013-04-09 21:29:57 -0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT `recipes`.* FROM `recipes` WHERE `recipes`.`id` = 1 LIMIT 1[0m
+  Rendered recipes/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2013-04-09 21:29:57 -0300
+Served asset /recipes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 21:29:57 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 21:29:57 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 21:29:57 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recipes.js?body=1" for 127.0.0.1 at 2013-04-09 21:29:57 -0300
+Served asset /recipes.js - 304 Not Modified (0ms)
